@@ -2,58 +2,114 @@
 <html lang="uz">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Zehngoh – Tez kunda...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zehngoh – Tez kunda</title>
     <style>
+      :root {
+        --primary-bg: #0f172a;
+        --primary-text: #f8fafc;
+        --button-bg-start: #3b82f6;
+        --button-bg-end: #2563eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
       html,
       body {
         height: 100%;
         margin: 0;
         padding: 0;
-        overflow: hidden;
-        background-color: #0f172a;
-        color: #f8fafc;
+        background-color: var(--primary-bg);
+        color: var(--primary-text);
         font-family: "Segoe UI", sans-serif;
+        overflow: hidden;
+      }
+
+      body {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
+        padding: 2rem;
       }
 
       h1 {
-        font-size: 3em;
-        margin-bottom: 0.4em;
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
       }
 
       p {
-        font-size: 1.5em;
-        margin-bottom: 2em;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        max-width: 500px;
+        line-height: 1.5;
       }
 
       a.button {
-        background: linear-gradient(135deg, #3b82f6, #2563eb);
-        color: white;
+        display: inline-block;
+        background: linear-gradient(
+          135deg,
+          var(--button-bg-start),
+          var(--button-bg-end)
+        );
+        color: #fff;
         text-decoration: none;
         padding: 0.9em 2em;
-        border-radius: 12px;
-        font-size: 1.1em;
-        font-weight: bold;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       a.button:hover {
         transform: scale(1.05);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+        }
+
+        a.button {
+          font-size: 1rem;
+          padding: 0.8em 1.6em;
+        }
+      }
+
+      @media (max-width: 400px) {
+        body {
+          padding: 1rem;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        a.button {
+          font-size: 0.95rem;
+          padding: 0.7em 1.4em;
+        }
       }
     </style>
   </head>
   <body>
     <h1>Zehngoh</h1>
     <p>Tez kunda...</p>
-    <a href="https://t.me/your_channel_link" class="button" target="_blank"
-      >Telegram kanalimizga birinchilardan bo‘lib qo‘shiling!</a
-    >
+    <a href="https://t.me/your_channel_link" class="button" target="_blank">
+      Telegram kanalimizga birinchilardan bo‘lib qo‘shiling!
+    </a>
   </body>
 </html>
